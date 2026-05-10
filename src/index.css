@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100..800&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+  --font-anek: "Anek Malayalam", sans-serif;
+  --animate-wiggle: wiggle 0.4s ease forwards;
+  --animate-border-blink: borderBlink .3s ease 3;
+
+}
+
+
+
+@keyframes borderBlink {
+
+  0%,
+  100% {
+    border-color: #e5e7eb;
+    /* gray-400 */
+  }
+
+  50% {
+    border-color: #fa6d6d;
+    /* red-400 */
+  }
+}
+
+
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(1deg);
+  }
+
+  40% {
+    transform: rotate(-1deg);
+  }
+
+  60% {
+    transform: rotate(1deg);
+  }
+
+  80% {
+    transform: rotate(-1deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+
+/* From Uiverse.io by KeylaSUE */
+.progress-loader {
+  position: absolute;
+}
+
+.progress-loader {
+
+  background: rgba(255, 255, 255, 0.2);
+  height: 10px;
+  border-radius: 7px;
+}
+
+.progress {
+  content: "";
+  width: 1px;
+  height: 10px;
+  border-radius: 7px;
+  background: rgb(136 191 252);
+  transition: 0.5s;
+  animation: loading1274 1s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes loading1274 {
+  0% {
+    width: 0%;
+  }
+
+  10% {
+    width: 10%;
+  }
+
+  50% {
+    width: 40%;
+  }
+
+  60% {
+    width: 60%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+#blankSubBlockCont .blankSubBlock {
+  background-color: rgb(241, 247, 247) !important;
+}
+
+#headerSection {
+  background-color: transparent;
+  transition: background-color 1s ease;
+}
+
+#headerSection.active {
+  background-color: #6b4fd8 !important;
+}
+
+#splashCardBase {
+  background: linear-gradient(to bottom, #6b4fd8, #ab46b0);
+}
+
+
+
+
+
+#baseCard {
+  background-color: #1f5696 !important;
+}
+
+#hintCardBase {
+  /* background: linear-gradient(to bottom, #a533df, #4e34c2); */
+  background: linear-gradient(to bottom, #774AFF, #5632C3);
+}
+
+#quizCardBase {
+  /* background: linear-gradient(to bottom, #488be4, #193685); */
+  background: linear-gradient(to bottom, #0f77cc, #1a3581);
+  box-shadow:
+    -5px 0 10px rgba(0, 0, 0, 0.205),
+    /* left shadow */
+    5px 0 10px rgba(0, 0, 0, 0.185);
+  /* right shadow */
+}
+
+
+.trans {
+  background-color: #1a368100;
+}
+
+#blankSubBlockCont .styleBtn {
+  background: rgb(40, 43, 61);
+}
+
+
+#syncForm ::part(region) {
+  background-color: rgba(0, 0, 100, 0.25) !important;
+  overflow: hidden;
+}
+
+#syncForm ::part(region-handle-right) {
+  border-right-width: 6px !important;
+  border-right-color: #1f301f !important;
+}
+
+#syncForm ::part(region-handle-left) {
+  border-left-width: 6px !important;
+  border-left-color: #1f301f !important;
+}
+
+
+
+body {
+  background-color: gray;
+}
+
+
+
+.quiz-card-base {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(0deg, rgb(56, 43, 77) 100%, rgba(50, 66, 143, 1) 0%);
+}
