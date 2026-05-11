@@ -70,6 +70,8 @@ export default function QuizController() {
 
 
     const checkAnswer = function (usrAnswer) {
+
+
         if (showSplash) {
             return null;
         }
@@ -127,7 +129,6 @@ export default function QuizController() {
                 break
             case "sync":
             case "split":
-                console.log("usrAnswrrr=", currentQuiz.type, usrAnswer);
 
                 const allValid = usrAnswer.every((ans, index) => {
                     const rule = currentQuiz.correct[index];

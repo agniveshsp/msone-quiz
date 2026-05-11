@@ -28,20 +28,20 @@ export default function HintCard({ hintText, showHint, hintPress }) {
             className={` 
         absolute top-0 left-0 w-full h-[50%]
         flex flex-col items-center
-        bg-blue-500
         transition-transform duration-500 ease-in-out rounded-b-lg
-        ${showHint ? "translate-y-0 shadow-md" : "-translate-y-full"}
+        ${showHint ? "translate-y-0 shadow-md opacity-100" : "-translate-y-full "}
       `}
         >
-            {/* TEXT AREA */}
-            <div className="w-[97%] sm:w-[50%] flex-1 flex items-center justify-center px-4">
-                <h2 className="text-[clamp(0.8rem,2vw,1.25rem)] py-6 whitespace-pre-line text-gray-50 text-center font-medium font-anek">
+          
+            <div className="w-[97%] sm:w-[70%] flex-1 flex items-center justify-center px-4">
+                <h2 className="text-[clamp(0.85rem,0.6rem+0.5vw,1.2rem)] py-6 whitespace-pre-line text-gray-50 text-center font-medium font-anek">
                     Hint: {hintText}
                 </h2>
             </div>
 
-            {/* BUTTON AREA */}
-            <div className="h-[35%] flex items-start justify-center">
+          
+
+            <div className="min-h-[35%] flex items-start justify-center">
 
 
                 <button
@@ -52,8 +52,6 @@ export default function HintCard({ hintText, showHint, hintPress }) {
          transition-all duration-150 cursor-pointer">
                     {"Got it"}
                 </button>
-
-
             </div>
         </div>
     );

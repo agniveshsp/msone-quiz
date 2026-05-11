@@ -271,7 +271,7 @@ export const Questions = [{
     id: 17,
     type: "sync", question: "ചുവടെയുള്ള പ്രശ്നം പരിഹരിക്കുക.",
     video: videos.sync1,
-    region: [{ regID: 0, regionStart: 1.53, regionEnd: 2.76, dialouge: "ഈ കത്തല്ലേ\nനിനക്ക് വേണ്ടത്?" },], correct: [{ startMin: 0.93, startMax: 1.08, endMin: 2.15, endMax: 2.8 }],
+    region: [{ regID: 0, regionStart: 1.53, regionEnd: 2.76, dialouge: "ഈ കത്തല്ലേ\nനിനക്ക് വേണ്ടത്?" },], correct: [{ startMin: 0.91, startMax: 1.08, endMin: 2.15, endMax: 2.8 }],
     splashText: "പരിഭാഷയിലെ അക്ഷരതെറ്റുകൾ പരിശോധിക്കുന്ന അതേ സൂക്ഷ്മതയോടെ തന്ന സിങ്കും ശ്രദ്ധിക്കുക.",
     splashImage: null, hintText: "", hintCondition: null
 },
@@ -288,7 +288,7 @@ export const Questions = [{
     type: "sync", question: "ചുവടെയുള്ള പ്രശ്നം പരിഹരിക്കുക.",
     video: videos.sync3,
     region: [{ regID: 0, regionStart: 0.33, regionEnd: 1.944, dialouge: "എന്താ പേര്?" }, { regID: 1, regionStart: 1.70, regionEnd: 2.64, dialouge: "പീറ്റർ ജോഷ്വാ." }],
-    correct: [{ startMin: 0.30, startMax: 0.45, endMin: 1.30, endMax: 1.70 }, { startMin: 1.6, startMax: 1.76, endMin: 2.40, endMax: 2.8 }],
+    correct: [{ startMin: 0.30, startMax: 0.45, endMin: 1.30, endMax: 1.70 }, { startMin: 1.56, startMax: 1.76, endMin: 2.40, endMax: 2.8 }],
     splashText: "പരിഭാഷയിലെ വരികളുടെ Timecode പരസ്പരം Overlap ചെയ്യാൻ പാടില്ല.",
     splashImage: null, hintText: "", hintCondition: null
 },

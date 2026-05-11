@@ -6,13 +6,13 @@ export default function WelcomeScreen({ setStage }) {
     function handleStartClick(setStage) {
         setIsLoading(true)
         setTimeout(() => {
-            setStage("quiz");; // your function
+            setStage("quiz");
         }, 1000);
     };
 
     return <>
         <div className="flex flex-col pt-4 pb-5 px-4 w-full md:w-[80%] justify-center items-center">
-            <h2 className="mb-2 whitespace-pre-line quiz-question-text text-white text-center font-medium font-anek text-[clamp(1.5rem,3vw,2rem)] ">
+            <h2 className="mb-2 whitespace-pre-line quiz-question-text text-white text-center font-medium font-anek text-[clamp(0.95rem,0.6rem+0.9vw,2rem)] ">
                 സ്വാഗതം!
             </h2>
             <p className="text-white text-center font-anek text-[clamp(.8rem,1vw,2rem)] hyphens-auto break-words" >

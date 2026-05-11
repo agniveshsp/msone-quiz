@@ -35,11 +35,11 @@ export default function BlankSubtitleBlock({ subtitleBlocks }) {
         <>
             {/* <div className="h-[30vh] md:h-[40vh] flex flex-col bg-yellow-300 w-full items-center justify-evenly text-[clamp(0.8rem,2vw,1.25rem)] text-center"> */}
             <div id="blankSubBlockCont" className=" trans bg-yellow-300 w-full ">
-                <form onSubmit={handleSubmit} className="flex flex-col items-center justify-evenly h-full text-[clamp(0.8rem,2vw,1.25rem)] text-center">
+                <form onSubmit={handleSubmit} className="flex flex-col items-center justify-evenly h-full text-[clamp(0.85rem,0.6rem+0.5vw,1.2rem)] text-center">
                     {subtitleBlocks.map((subBlock, index) => (
                         <div
                             key={index}
-                            className={` w-[92%] sm:w-[50%] flex flex-col items-center justify-center whitespace-pre-line no-wrap min-h-[40px] 
+                            className={`w-[50%] max-[1367px]:w-[75%] max-sm:w-[90%] flex flex-col items-center justify-center whitespace-pre-line no-wrap min-h-[40px] 
                     lg:min-h-[80px] mcq-choices-text mb-[1rem] font-anek 
                     blankSubBlock text-gray-900 border border-gray-300 px-6 py-2 rounded-lg  whitespace-nowrap  border-2  shadow-sm
                     ${wrongBlocks[index]

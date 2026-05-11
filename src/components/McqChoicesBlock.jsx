@@ -32,10 +32,10 @@ export default function McqChoicesBlock({ choicesArray }) {
     const checkAnswerFunc = useContext(QuizContext);
 
     return <>
-        <div className="h-[40vh] flex flex-col w-full items-center justify-evenly trans">
+        <div className="min-h-[40vh] flex flex-col w-full items-center justify-evenly trans">
             {choicesArray.map((choice, ind) => {
                 return (
-                    <button key={ind} onClick={() => handleChoice(ind)} className={`w-[85%] sm:w-[50%] text-[clamp(0.8rem,2vw,1.25rem)] min-h-[clamp(3.5rem,4.1vw,5rem)]  
+                    <button key={ind} onClick={() => handleChoice(ind)} className={`w-[50%] max-[1367px]:w-[75%] max-sm:w-[90%] text-[clamp(0.85rem,0.6rem+0.5vw,1.2rem)] min-h-[clamp(3.5rem,4.1vw,5rem)]  
                     whitespace-pre-line mb-[1rem] font-anek bg-gray-50 text-gray-900 border px-6 py-2 rounded-lg  
                     transition-all duration-150 ease-in-out hover:bg-gray-100 border-2
                      active:bg-gray-200 active:scale-98  whitespace-nowrap border-gray-300  ${wrongIndex === ind
@@ -50,4 +50,3 @@ export default function McqChoicesBlock({ choicesArray }) {
     </>
 
 }
-// lg:min-h-[80px]

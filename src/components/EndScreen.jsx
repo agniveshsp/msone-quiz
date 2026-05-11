@@ -17,7 +17,7 @@ export default function EndScreen({ resetQuiz }) {
             <h2 className="mb-2 whitespace-pre-line quiz-question-text text-white text-center font-medium font-anek text-[clamp(1.5rem,3vw,2rem)] ">
 
             </h2>
-            <p className="text-white text-center font-anek text-[clamp(.8rem,1vw,2rem)] hyphens-auto break-words" >
+            <p className="text-white text-center font-anek text-[clamp(0.85rem,0.6rem+0.5vw,1.2rem)] hyphens-auto break-words" >
                 ഒരു എംസോൺ പരിഭാഷയ്ക്ക് ആവശ്യമായ അടിസ്ഥാന ഫോർമാറ്റും സ്റ്റൈലിങ്ങുമാണ്
                 ഇവിടെ കണ്ടത്. ഇതിനെക്കുറിച്ചുള്ള കൂടുതൽ വിശദമായ വിവരങ്ങൾ <a target="_blank" href="https://malayalamsubtitles.org/how-to-create-subtitles/"><span className="underline text-lime-300">എംസോൺ സൈറ്റിൽ</span></a> ലഭ്യമാണ്.</p>
                 

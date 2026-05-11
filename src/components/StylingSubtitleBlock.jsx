@@ -79,12 +79,12 @@ export default function StylingSubtitleBlock({ subtitleBlocks }) {
     return (
         <>
 
-            <div id="blankSubBlockCont" className=" trans bg-yellow-300 w-full flex flex-col items-center justify-evenly h-full text-[clamp(0.8rem,2vw,1.25rem)] text-center ">
+            <div id="blankSubBlockCont" className=" trans w-full flex flex-col items-center justify-evenly h-full text-[clamp(0.85rem,0.6rem+0.5vw,1.2rem)] text-center ">
 
                 {subtitleBlocks.map((subBlock, index) => (
                     <div
                         key={index}
-                        className={` w-[92%] sm:w-[50%] flex flex-col items-center justify-center whitespace-pre-line no-wrap min-h-[40px] 
+                        className={`w-[50%] max-[1367px]:w-[75%] max-sm:w-[90%]  flex flex-col items-center justify-center whitespace-pre-line no-wrap min-h-[40px] 
                     lg:min-h-[80px] mcq-choices-text mb-[1rem] font-anek 
                     blankSubBlock text-black px-6 py-2 rounded-lg border-2  border-gray-300 whitespace-nowrap
                     ${showRed === null

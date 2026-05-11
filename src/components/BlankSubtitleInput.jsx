@@ -1,8 +1,4 @@
 
-// import { useState } from "react";
-
-
-
 export default function BlankSubtitleInput({ name, value, label, chWidth, align }) {
     const alignClass = {
         left: "text-left",

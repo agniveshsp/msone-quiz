@@ -13,15 +13,18 @@ export default function SyncWaveformBlock({ videoRef, setCues, cues, splitable, 
     const [audioSrc, setAudioSrc] = useState(null);
 
     const [splitableState, setSplitableState] = useState(splitable);
+    const [waveGenerated, setWaveGenerated] = useState(false);
     const [showRed, setShowRed] = useState(null)
 
     useEffect(() => {
+
         setSplitableState(splitable);
     }, [splitable]);
 
 
     useEffect(() => {
         const video = videoRef.current;
+        setWaveGenerated(false);
         if (!video) return;
 
         const updateSrc = () => {
@@ -52,6 +55,7 @@ export default function SyncWaveformBlock({ videoRef, setCues, cues, splitable, 
 
         const initWaveSurfer = () => {
             //  destroy old instance before creating new
+
             if (wsRef.current) {
                 wsRef.current.destroy();
                 wsRef.current = null;
@@ -80,7 +84,7 @@ export default function SyncWaveformBlock({ videoRef, setCues, cues, splitable, 
 
             ws.load(audioSrc); // now uses state
 
-            ws.once('decode', () => {
+            ws.once('ready', () => {
                 cues.forEach((r, index) => {
                     const reg = regions.addRegion({
                         start: r.start,
@@ -97,10 +101,10 @@ export default function SyncWaveformBlock({ videoRef, setCues, cues, splitable, 
                     };
 
                 });
-
-
+                setWaveGenerated(true);
 
             });
+
 
             regions.on('region-updated', (region) => {
 
@@ -184,7 +188,7 @@ export default function SyncWaveformBlock({ videoRef, setCues, cues, splitable, 
 
         newRegion.data = { id: activeId + 1 };
 
-        // update state (IMPORTANT: pass same values)
+      
         setCues(prev =>
             splitRegionArray(prev, activeId, leftEnd, rightStart, text1, text2)
         );
@@ -232,8 +236,8 @@ export default function SyncWaveformBlock({ videoRef, setCues, cues, splitable, 
     };
 
     return (
-        <div className="min-h-[25dvh] flex flex-col bg-yellow-300 w-full items-center justify-evenly trans ">
-            <div className={`flex w-[90%] sm:w-[60%]  justify-center bg-cyan-100 rounded border-2 border-gray-300 shadow-md 
+        <div className="min-h-[25dvh] flex flex-col w-full items-center justify-evenly trans ">
+            <div className={`flex w-[50%] max-[1367px]:w-[75%] max-sm:w-[90%] h-[80px] justify-center bg-cyan-100 rounded border-2 border-gray-300 shadow-md 
             ${showRed === null
                     ? "border-gray-300"
                     : showRed === true
@@ -255,8 +259,11 @@ export default function SyncWaveformBlock({ videoRef, setCues, cues, splitable, 
                     ✂️ Split Line
                 </button>
             )}
-            <button onClick={handleSubmitClick}
-                className="text-xl px-5 py-1 mb-4 bg-gradient-to-t from-green-900 to-emerald-500 text-white font-semibold rounded-md shadow-md border-2 border-gray-100 hover:from-green-800 hover:to-emerald-500 active:scale-98 transition-all duration-150 cursor-pointer">
+            <button onClick={handleSubmitClick} disabled={!waveGenerated}
+                className={`text-xl px-5 py-1 mb-4 bg-gradient-to-t from-green-900
+                 to-emerald-500 text-white font-semibold rounded-md shadow-md 
+                 border-2 border-gray-100 hover:from-green-800 hover:to-emerald-500 
+                 active:scale-98 transition-all duration-150 cursor-pointer ${!waveGenerated ? "opacity-50 cursor-not-allowed" : ""}`}>
                 Submit
             </button>
 

@@ -16,7 +16,7 @@ export default function SyncWaveFormQuizBlock({ questionText, video, region, spl
         }))
     );
 
-    console.log("cues", cues);
+  
     useEffect(() => {
         if (!region) return;
 
@@ -29,11 +29,7 @@ export default function SyncWaveFormQuizBlock({ questionText, video, region, spl
             }))
         );
 
-    }, [region]); //  THIS is required
-
-
-
-    console.log("cues", cues);
+    }, [region]); 
 
     return (
         <>  <BlankQuestionBlock questionText={questionText}>
@@ -45,9 +41,3 @@ export default function SyncWaveFormQuizBlock({ questionText, video, region, spl
     );
 }
 
-// return <>
-//     <BlankQuestionBlock />
-//     <SyncWaveFormBlock />
-// </>
-
-// }

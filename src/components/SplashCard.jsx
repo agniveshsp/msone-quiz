@@ -9,7 +9,7 @@ export default function SplashCard({ splashText, showSplash, splashPress }) {
   >
 
     <div className="w-[97%] sm:w-[70%] flex-1 flex items-start justify-center px-4" >
-      <h2 className="text-[clamp(0.8rem,2vw,1.25rem)] py-6 whitespace-pre-line w-full text-gray-50 text-center font-medium font-anek">
+      <h2 className="text-[clamp(0.85rem,0.6rem+0.5vw,1.2rem)] py-6 whitespace-pre-line w-full text-gray-50 text-center font-medium font-anek">
         {splashText}
       </h2>
     </div>
