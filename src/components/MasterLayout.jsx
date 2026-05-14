@@ -25,10 +25,10 @@ export default function MasterLayout({
         switch (stage) {
             case "welcome":
                 return <WelcomeScreen setStage={setStage} />;
-
+            case "continue":
+                return <WelcomeScreen setStage={setStage} resume={true} />;
             case "quiz":
                 return <QuizCard currentQuiz={currentQuiz} currentQuizID={currentQuizID} totalQuestions={totalQuestions} showSplash={showSplash} />
-
             case "end":
                 return <EndScreen resetQuiz={resetQuiz} />;
 

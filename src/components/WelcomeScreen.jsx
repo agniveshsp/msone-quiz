@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function WelcomeScreen({ setStage }) {
+export default function WelcomeScreen({ setStage, resume = false }) {
     const [isLoading, setIsLoading] = useState(false);
 
     function handleStartClick(setStage) {
@@ -25,7 +25,7 @@ export default function WelcomeScreen({ setStage }) {
                  cursor-pointer transition-all bg-orange-600 text-white px-6 py-1 rounded-lg font-anek border-amber-400 shadow-lg
                 border-b-3  hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px]
                 active:border-b-[2px] active:brightness-90 active:translate-y-[2px] text-[clamp(1.2rem,1.2vw,2rem)]">
-                    Start➜
+                    {resume ? "Continue⏯" : "Start➜"}
                 </button> : <div className=" progress-loader w-[50%] md:w-[30%] ">
                     <div className="progress"></div>
                 </div>}

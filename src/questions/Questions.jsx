@@ -1,23 +1,43 @@
 import BlankSubtitleInput from "../components/BlankSubtitleInput"
 
 
-export const videos = {
-    punchDontcopy: "https://files.catbox.moe/qicl92.mp4",
-    punch2speakers: "https://files.catbox.moe/nimnm4.mp4",
-    punch3stops: "https://files.catbox.moe/9sxy6y.mp4",
-    punchinterrupted: "https://files.catbox.moe/sjm7d7.mp4",
-    punch2speakerinterrupt: "https://files.catbox.moe/m6kzza.mp4",
-    punchpauselast: "https://files.catbox.moe/hb5ygx.mp4",
-    punch3fadeellie: "https://files.catbox.moe/azb55j.mp4",
-    punch3fadealison: "https://files.catbox.moe/rz59ph.mp4",
-    phonecall: "https://files.catbox.moe/1x5byq.mp4",
-    erinthink: "https://files.catbox.moe/9xxxhw.mp4",
+// export const videos = {
+//     punchDontcopy: "https://files.catbox.moe/qicl92.mp4",
+//     punch2speakers: "https://files.catbox.moe/nimnm4.mp4",
+//     punch3stops: "https://files.catbox.moe/9sxy6y.mp4",
+//     punchinterrupted: "https://files.catbox.moe/sjm7d7.mp4",
+//     punch2speakerinterrupt: "https://files.catbox.moe/m6kzza.mp4",
+//     punchpauselast: "https://files.catbox.moe/hb5ygx.mp4",
+//     punch3fadeellie: "https://files.catbox.moe/azb55j.mp4",
+//     punch3fadealison: "https://files.catbox.moe/rz59ph.mp4",
+//     phonecall: "https://files.catbox.moe/1x5byq.mp4",
+//     erinthink: "https://files.catbox.moe/9xxxhw.mp4",
 
-    sync1: "https://files.catbox.moe/2091rc.mp4",
-    sync2: "https://files.catbox.moe/z82tze.mp4",
-    sync3: "https://files.catbox.moe/ttu2qj.mp4",
-    split1: "https://files.catbox.moe/zaql52.mp4",
+//     sync1: "https://files.catbox.moe/2091rc.mp4",
+//     sync2: "https://files.catbox.moe/z82tze.mp4",
+//     sync3: "https://files.catbox.moe/jbyhmt.mp4",
+//     split1: "https://files.catbox.moe/zaql52.mp4",
+// };
+
+export const videos = {
+    7: "https://files.catbox.moe/qicl92.mp4",
+    8: "https://files.catbox.moe/nimnm4.mp4",
+    9: "https://files.catbox.moe/9sxy6y.mp4",
+    10: "https://files.catbox.moe/hb5ygx.mp4",
+    11: "https://files.catbox.moe/sjm7d7.mp4",
+    12: "https://files.catbox.moe/m6kzza.mp4",
+
+    13: "https://files.catbox.moe/azb55j.mp4",
+    14: "https://files.catbox.moe/rz59ph.mp4",
+    15: "https://files.catbox.moe/1x5byq.mp4",
+    16: "https://files.catbox.moe/9xxxhw.mp4",
+
+    17: "https://files.catbox.moe/2091rc.mp4",
+    18: "https://files.catbox.moe/z82tze.mp4",
+    19: "https://files.catbox.moe/jbyhmt.mp4",
+    20: "https://files.catbox.moe/zaql52.mp4",
 };
+
 
 
 export const Questions = [{
@@ -76,7 +96,7 @@ export const Questions = [{
 }, {
     id: 7,
     type: "blanks", question: "ശരിയായ Punctuation നൽകുക.",
-    video: videos.punchDontcopy,
+    video: videos[7],
     subtitles: [<>
         നീ വീണ്ടും<br />
         <span>
@@ -97,7 +117,7 @@ export const Questions = [{
         <span><BlankSubtitleInput key="8-1" name="i1b1" label="i1b1" chWidth={3} align="right" />വേറെന്ത് വഴിയാണുള്ളത്?<br /></span>
         <span><BlankSubtitleInput key="8-2" name="i1b2" label="i1b2" chWidth={3} align="right" />നീ മെക്സിക്കോ വിട്ടു പിടി.</span>
     </>],
-    video: videos.punch2speakers,
+    video: videos[8],
     cues: [{ id: 0, start: 0, end: 4, text: "What other option do you have?\n Dude, enough with the Mexico bullshit." },],
     correct: { i1b1: "LSA=", i1b2: "LSA=" },
     splashText: "ഒരു സീനിൽ ഒന്നിലധികം പേർ സംസാരിക്കുമ്പോൾ അവരുടെ സംഭാഷണങ്ങൾ വേർതിരിച്ച് കാണിക്കാനായി - ഉപയോഗിക്കുക.",
@@ -119,7 +139,7 @@ export const Questions = [{
         </span>
     </>
     ],
-    video: videos.punch3stops,
+    video: videos[9],
     cues: [{ id: 0, start: 0, end: 1.5, text: "Those three men know\n you've got the money" }, { id: 1, start: 1.51, end: 4, text: " just as surely as we do." }],
     correct: { i1b1: "Li4u", i2b1: "Li4u" },
     splashText: "നീളം കൂടിയ വരികൾ സ്പ്ലിറ്റ് ചെയ്ത് എഴുതുമ്പോൾ ആദ്യ വരിയുടെ അവസാനവും, അവസാന വരിയുടെ ആദ്യവും മൂന്ന് കുത്തുകൾ (...) വേണം.\n\nTip: Pause ഇല്ലാതെ ഒറ്റ ശ്വാസത്തിൽ പറഞ്ഞ് അവസാനിപ്പിക്കുന്ന ഡയലോഗുകൾക്ക് ഈ മാതൃക പിൻതുടരാം.",
@@ -128,7 +148,7 @@ export const Questions = [{
 {
     id: 10,
     type: "blanks", question: "ശരിയായ Punctuation നൽകുക.",
-    video: videos.punchpauselast,
+    video: videos[10],
     subtitles: [<>
         ഇവറ്റകളെല്ലാം<br />
         <span>
@@ -162,7 +182,7 @@ export const Questions = [{
         </span>
     </>
     ],
-    video: videos.punchinterrupted,
+    video: videos[11],
     cues: [{ id: 0, start: 0, end: 2, text: "I'm not getting into some\n creepy ambulance with a" },],
     correct: { i1b1: "LS0=" },
     splashText: "പുറമേ നിന്നുള്ള തടസ്സങ്ങൾ കാരണം ഒരു സംഭാഷണം മുറിഞ്ഞു പോവുകയാണെങ്കിൽ, അത് സൂചിപ്പിക്കാൻ രണ്ട് ഹൈഫനുകൾ (--) ഉപയോഗിക്കുക.",
@@ -186,7 +206,7 @@ export const Questions = [{
     </>
 
     ],
-    video: videos.punch2speakerinterrupt,
+    video: videos[12],
     cues: [{ id: 0, start: 0, end: 1.4, text: "Madam President,\n In both cases we" }, { id: 1, start: 1.41, end: 6, text: "I have thrown them\noff the scent." }],
     correct: { i1b1: "LS0=" },
     splashText: "മറ്റൊരു വ്യക്തിയുടെ ഇടപ്പെടൽ മൂലം ഒരു സംഭാഷണം പൂർത്തിയാക്കാൻ കഴിയാത്തത് സൂചിപ്പിക്കാൻ -- ഉപയോഗിക്കുക.",
@@ -195,7 +215,7 @@ export const Questions = [{
 {
     id: 13,
     type: "blanks", question: "ശരിയായ Punctuation നൽകുക.",
-    video: videos.punch3fadeellie,
+    video: videos[13],
     cues: [{ id: 0, start: 0, end: 2.09, text: "I didn't know,\nI thought" }, { id: 1, start: 2.1, end: 6, text: "How did you \nget to Jackson?" }],
     subtitles: [<>
         അതെനിക്കറിയില്ലായിരുന്നു, <br />
@@ -217,7 +237,7 @@ export const Questions = [{
 {
     id: 14,
     type: "blanks", question: "ശരിയായ Punctuation നൽകുക.",
-    video: videos.punch3fadealison,
+    video: videos[14],
     cues: [{ id: 0, start: 0, end: 2.39, text: "And then I found glass\n on her car like" }, { id: 1, start: 2.4, end: 6, text: "Her window had been\n smashed in." }],
     subtitles: [<>
         പക്ഷേ, കാറിനുള്ളിൽ കിടന്ന <br />
@@ -237,7 +257,7 @@ export const Questions = [{
 }, {
     id: 15,
     type: "style", question: "ശരിയായ Styling നൽകുക.",
-    video: videos.phonecall,
+    video: videos[15],
     cues: [{ id: 0, start: 0, end: 6, text: "If you hang up,\nI will kill you." }],
     subtitles: [<>
         ഫോൺ വെച്ചാൽ,<br />
@@ -253,7 +273,7 @@ export const Questions = [{
 {
     id: 16,
     type: "style", question: "ശരിയായ Styling നൽകുക.",
-    video: videos.erinthink,
+    video: videos[16],
     cues: [{ id: 0, start: 0, end: 6, text: "Oh God! \n He nearly killed me." }],
     subtitles: [<> <span>
         ദൈവമേ!<span className="inline-block w-[4ch] invisible"></span> <br /></span>
@@ -270,7 +290,7 @@ export const Questions = [{
 {
     id: 17,
     type: "sync", question: "ചുവടെയുള്ള പ്രശ്നം പരിഹരിക്കുക.",
-    video: videos.sync1,
+    video: videos[17],
     region: [{ regID: 0, regionStart: 1.53, regionEnd: 2.76, dialouge: "ഈ കത്തല്ലേ\nനിനക്ക് വേണ്ടത്?" },], correct: [{ startMin: 0.91, startMax: 1.08, endMin: 2.15, endMax: 2.8 }],
     splashText: "പരിഭാഷയിലെ അക്ഷരതെറ്റുകൾ പരിശോധിക്കുന്ന അതേ സൂക്ഷ്മതയോടെ തന്ന സിങ്കും ശ്രദ്ധിക്കുക.",
     splashImage: null, hintText: "", hintCondition: null
@@ -278,7 +298,7 @@ export const Questions = [{
 {
     id: 18,
     type: "sync", question: "ചുവടെയുള്ള പ്രശ്നം പരിഹരിക്കുക.",
-    video: videos.sync2,
+    video: videos[18],
     region: [{ regID: 0, regionStart: 1.32, regionEnd: 2.28, dialouge: "അവിടെയൊന്നും അവന്റെ\n പൊടിപോലുമില്ലായിരുന്നു." }], correct: [{ startMin: 1.31, startMax: 1.46, endMin: 2.40, endMax: 3.3 }],
     splashText: "പ്രേക്ഷകന് ഡയലോഗ് വായിച്ചെടുക്കാൻ മതിയായ സമയം ലഭ്യമാകുന്നുണ്ടെന്ന് ഉറപ്പാക്കുക. \n\n ",
     splashImage: null, hintText: "", hintCondition: null
@@ -286,16 +306,16 @@ export const Questions = [{
 {
     id: 19,
     type: "sync", question: "ചുവടെയുള്ള പ്രശ്നം പരിഹരിക്കുക.",
-    video: videos.sync3,
+    video: videos[19],
     region: [{ regID: 0, regionStart: 0.33, regionEnd: 1.944, dialouge: "എന്താ പേര്?" }, { regID: 1, regionStart: 1.70, regionEnd: 2.64, dialouge: "പീറ്റർ ജോഷ്വാ." }],
-    correct: [{ startMin: 0.30, startMax: 0.45, endMin: 1.30, endMax: 1.70 }, { startMin: 1.56, startMax: 1.76, endMin: 2.40, endMax: 2.8 }],
+    correct: [{ startMin: 0.30, startMax: 0.45, endMin: 1.12, endMax: 1.70 }, { startMin: 1.56, startMax: 1.76, endMin: 2.40, endMax: 2.8 }],
     splashText: "പരിഭാഷയിലെ വരികളുടെ Timecode പരസ്പരം Overlap ചെയ്യാൻ പാടില്ല.",
     splashImage: null, hintText: "", hintCondition: null
 },
 {
     id: 20,
     type: "split", question: "ചുവടെയുള്ള പ്രശ്നം പരിഹരിക്കുക.",
-    video: videos.split1,
+    video: videos[20],
     region: [{ regID: 0, regionStart: 0.25, regionEnd: 3.59, dialouge: "ചാർള്സ് എല്ലാം ലേലത്തിൽ വിറ്റു,\n ഇനി ഇത് മാത്രമേ ബാക്കിയുള്ളൂ." }],
     splitText: ["ചാർള്സ് എല്ലാം \nലേലത്തിൽ വിറ്റു,", "ഇനി ഇത് മാത്രമേ\n  ബാക്കിയുള്ളൂ."],
     correct: [{ startMin: 0.23, startMax: 0.3, endMin: 1.45, endMax: 2.26 }, { startMin: 2.15, startMax: 2.32, endMin: 3.2, endMax: 6 }],

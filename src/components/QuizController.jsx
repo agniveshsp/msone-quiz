@@ -7,42 +7,57 @@ export const QuizContext = createContext();
 
 export default function QuizController() {
     const [stage, setStage] = useState("welcome");
-
     const [showSplash, setShowSplash] = useState(false);
     const [showHint, setShowHint] = useState(false)
-    const initialQuestion = 0;
+
+    const [initialQuestion] = useState(() => {
+        const savedIndex = localStorage.getItem("questionIndex");
+
+        return savedIndex !== null
+            ? Number(savedIndex)
+            : 0;
+    });
+
+    const [questionIndex, setQuestionIndex] = useState(initialQuestion);
+    const [splashTextID, setSplashTextID] = useState(initialQuestion - 1)
+
+    useEffect(() => {
+        if (questionIndex > 0) {
+            setStage("continue");
+        }
+    }, []);
 
 
-    const [questionIndex, setQuestionIndex] = useState(initialQuestion)
     const currentQuiz = Questions[questionIndex]
     const totalQuestions = Questions.length;
-    const [splashTextID, setSplashTextID] = useState(initialQuestion - 1)
 
 
     const preloadedVideos = useRef(new Set());
 
-    async function preloadVideo(src) {
+
+    function preloadVideo(src) {
         if (!src || preloadedVideos.current.has(src)) {
             return;
         }
 
+        const video = document.createElement("video");
+        video.preload = "auto";
+        video.src = src;
+
         preloadedVideos.current.add(src);
-
-        try {
-            await fetch(src, {
-                mode: "cors",
-                cache: "force-cache",
-            });
-
-        } catch (err) {
-
-        }
     }
 
+
+
+
     useEffect(() => {
-        const videoArray = Object.values(videos);
-        const videoToPreload = videoArray[questionIndex - 1];
-        preloadVideo(videoToPreload);
+        const videoToPreload = videos[questionIndex + 1];
+
+        if (videoToPreload) {
+            preloadVideo(videoToPreload);
+        }
+
+
     }, [questionIndex]);
 
 
@@ -70,7 +85,6 @@ export default function QuizController() {
 
 
     const checkAnswer = function (usrAnswer) {
-
 
         if (showSplash) {
             return null;
@@ -212,6 +226,7 @@ export default function QuizController() {
         setShowHint(false);
         setQuestionIndex(0);
         setSplashTextID(-1);
+        localStorage.removeItem("questionIndex");
     }
 
 
@@ -219,6 +234,8 @@ export default function QuizController() {
         setShowSplash(false);
         if (stage === "end") {
             soundsRef.current.victory.play();
+        } else {
+            localStorage.setItem("questionIndex", questionIndex);
         }
     }
 
